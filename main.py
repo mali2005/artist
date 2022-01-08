@@ -38,6 +38,6 @@ morph = cv.morphologyEx(blendimage, cv.MORPH_OPEN, kernel)
 
 result = cv.normalize(morph,None,20,255,cv.NORM_MINMAX)
 
-result = cv.GaussianBlur(result,(2,2),0)
+result = cv.GaussianBlur(result,(5,5),0)
 
 cv.imwrite("out.png",result)
